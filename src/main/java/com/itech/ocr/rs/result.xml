@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ocrsdk.com/schema/resultDescription-1.0.xsd http://ocrsdk.com/schema/resultDescription-1.0.xsd" xmlns="http://ocrsdk.com/schema/resultDescription-1.0.xsd">
+  <page index="0">
+    <text id="fromType" left="1600" top="400" right="1850" bottom="500">
+      <value>Form 1098</value>
+      <line left="1697" top="453" right="1850" bottom="480">
+        <char left="1697" top="456" right="1711" bottom="478">F</char>
+        <char left="1711" top="462" right="1726" bottom="479">o</char>
+        <char left="1729" top="462" right="1737" bottom="479">r</char>
+        <char left="1737" top="462" right="1761" bottom="479">m</char>
+        <char left="1762" top="453" right="1779" bottom="479"> </char>
+        <char left="1780" top="453" right="1793" bottom="479">1</char>
+        <char left="1799" top="454" right="1817" bottom="480">0</char>
+        <char left="1817" top="453" right="1835" bottom="480">9</char>
+        <char left="1837" top="453" right="1850" bottom="479">8</char>
+      </line>
+    </text>
+    <text id="recipientBio" left="400" top="330" right="870" bottom="550">
+      <value>QUICKEN LOANS INC. 1050 WOODWARD AVE DETROIT, Ml 48226 800-863-4332</value>
+      <line left="425" top="341" right="846" bottom="377">
+        <char left="425" top="344" right="454" bottom="374">Q</char>
+        <char left="457" top="344" right="482" bottom="374">U</char>
+        <char left="488" top="344" right="494" bottom="374">I</char>
+        <char left="497" top="344" right="523" bottom="374">C</char>
+        <char left="527" top="345" right="550" bottom="374">K</char>
+        <char left="555" top="344" right="578" bottom="374">E</char>
+        <char left="581" top="344" right="606" bottom="374">N</char>
+        <char left="607" top="344" right="621" bottom="374"> </char>
+        <char left="622" top="345" right="641" bottom="374">L</char>
+        <char left="643" top="344" right="671" bottom="377">O</char>
+        <char left="673" top="344" right="697" bottom="377">A</char>
+        <char left="702" top="344" right="727" bottom="375">N</char>
+        <char left="730" top="342" right="754" bottom="376">S</char>
+        <char left="755" top="341" right="769" bottom="376"> </char>
+        <char left="770" top="341" right="776" bottom="373">I</char>
+        <char left="781" top="342" right="805" bottom="374">N</char>
+        <char left="810" top="342" right="836" bottom="374">C</char>
+        <char left="840" top="367" right="846" bottom="374">.</char>
+        <char left="0" top="0" right="0" bottom="0"> </char>
+      </line>
+      <line left="427" top="390" right="869" bottom="425">
+        <char left="427" top="395" right="439" bottom="422">1</char>
+        <char left="447" top="395" right="467" bottom="424">0</char>
+        <char left="469" top="393" right="489" bottom="424">5</char>
+        <char left="492" top="394" right="512" bottom="423">0</char>
+        <char left="513" top="393" right="525" bottom="423"> </char>
+        <char left="526" top="393" right="563" bottom="422">W</char>
+        <char left="564" top="393" right="593" bottom="424">O</char>
+        <char left="596" top="393" right="625" bottom="424">O</char>
+        <char left="629" top="393" right="652" bottom="424">D</char>
+        <char left="656" top="393" right="693" bottom="425">W</char>
+        <char left="693" top="392" right="718" bottom="425">A</char>
+        <char left="721" top="392" right="745" bottom="424">R</char>
+        <char left="752" top="390" right="776" bottom="424">D</char>
+        <char left="777" top="390" right="790" bottom="424"> </char>
+        <char left="791" top="392" right="815" bottom="422" suspicious="true">A</char>
+        <char left="819" top="392" right="843" bottom="424" suspicious="true">V</char>
+        <char left="846" top="392" right="869" bottom="424">E</char>
+        <char left="0" top="0" right="0" bottom="0"> </char>
+      </line>
+      <line left="427" top="441" right="791" bottom="477">
+        <char left="427" top="441" right="450" bottom="472">D</char>
+        <char left="455" top="441" right="477" bottom="472">E</char>
+        <char left="479" top="441" right="504" bottom="472">T</char>
+        <char left="507" top="441" right="530" bottom="471">R</char>
+        <char left="535" top="441" right="563" bottom="472">O</char>
+        <char left="568" top="441" right="574" bottom="471">I</char>
+        <char left="577" top="441" right="600" bottom="472">T</char>
+        <char left="603" top="466" right="609" bottom="477">,</char>
+        <char left="610" top="442" right="624" bottom="477"> </char>
+        <char left="625" top="442" right="654" bottom="472">M</char>
+        <char left="660" top="441" right="665" bottom="472">l</char>
+        <char left="666" top="441" right="678" bottom="473"> </char>
+        <char left="679" top="443" right="699" bottom="473">4</char>
+        <char left="702" top="441" right="722" bottom="473">8</char>
+        <char left="725" top="443" right="745" bottom="472">2</char>
+        <char left="747" top="441" right="767" bottom="472">2</char>
+        <char left="771" top="441" right="791" bottom="472">6</char>
+        <char left="0" top="0" right="0" bottom="0"> </char>
+      </line>
+      <line left="425" top="491" right="674" bottom="521">
+        <char left="425" top="491" right="445" bottom="520">8</char>
+        <char left="447" top="491" right="467" bottom="520">0</char>
+        <char left="469" top="491" right="491" bottom="520">0</char>
+        <char left="492" top="506" right="504" bottom="510">-</char>
+        <char left="507" top="491" right="527" bottom="520">8</char>
+        <char left="529" top="491" right="549" bottom="520">6</char>
+        <char left="551" top="491" right="571" bottom="520">3</char>
+        <char left="574" top="506" right="585" bottom="510">-</char>
+        <char left="587" top="491" right="607" bottom="520">4</char>
+        <char left="609" top="492" right="629" bottom="521">3</char>
+        <char left="631" top="491" right="652" bottom="521">3</char>
+        <char left="654" top="492" right="674" bottom="521">2</char>
+      </line>
+    </text>
+    <text id="recipientFederalId" left="330" top="700" right="600" bottom="760">
+      <value>38-2603955</value>
+      <line left="354" top="717" right="569" bottom="747">
+        <char left="354" top="717" right="374" bottom="745">3</char>
+        <char left="377" top="717" right="397" bottom="747">8</char>
+        <char left="399" top="730" right="411" bottom="737">-</char>
+        <char left="414" top="717" right="435" bottom="745">2</char>
+        <char left="438" top="717" right="457" bottom="745">6</char>
+        <char left="460" top="717" right="479" bottom="745">0</char>
+        <char left="482" top="717" right="502" bottom="745">3</char>
+        <char left="505" top="717" right="524" bottom="745">9</char>
+        <char left="527" top="717" right="547" bottom="745">5</char>
+        <char left="549" top="717" right="569" bottom="745">5</char>
+      </line>
+    </text>
+    <text id="payersTaxpayerId" left="820" top="700" right="1150" bottom="760">
+      <value>XXX-XX-3876</value>
+      <line left="846" top="711" right="1098" bottom="743">
+        <char left="846" top="711" right="873" bottom="743">X</char>
+        <char left="873" top="711" right="900" bottom="743">X</char>
+        <char left="900" top="711" right="927" bottom="741">X</char>
+        <char left="929" top="728" right="941" bottom="732">-</char>
+        <char left="942" top="712" right="969" bottom="743">X</char>
+        <char left="969" top="711" right="994" bottom="743">X</char>
+        <char left="998" top="728" right="1009" bottom="732">-</char>
+        <char left="1011" top="711" right="1031" bottom="743">3</char>
+        <char left="1034" top="711" right="1053" bottom="743">8</char>
+        <char left="1056" top="711" right="1075" bottom="742">7</char>
+        <char left="1076" top="712" right="1098" bottom="743">6</char>
+      </line>
+    </text>
+    <text id="payersName" left="230" top="820" right="460" bottom="920">
+      <value>STEVEN*JENNIFER</value>
+      <line left="251" top="823" right="460" bottom="868">
+        <char left="251" top="833" right="274" bottom="865">S</char>
+        <char left="276" top="833" right="300" bottom="863">T</char>
+        <char left="303" top="833" right="326" bottom="865">E</char>
+        <char left="326" top="833" right="354" bottom="863">V</char>
+        <char left="357" top="833" right="381" bottom="865">E</char>
+        <char left="383" top="835" right="404" bottom="865">N</char>
+        <char left="404" top="823" right="460" bottom="868" suspicious="true">*</char>
+      </line>
+      <line left="251" top="884" right="447" bottom="919">
+        <char left="251" top="886" right="266" bottom="919">J</char>
+        <char left="272" top="886" right="295" bottom="917">E</char>
+        <char left="299" top="886" right="322" bottom="919">N</char>
+        <char left="328" top="886" right="352" bottom="917">N</char>
+        <char left="358" top="885" right="364" bottom="917">I</char>
+        <char left="368" top="885" right="390" bottom="919">F</char>
+        <char left="393" top="884" right="416" bottom="919">E</char>
+        <char left="423" top="884" right="447" bottom="917">R</char>
+      </line>
+    </text>
+    <text id="streetAddress" left="230" top="970" right="650" bottom="1050">
+      <value>286 CHESTNUT ST</value>
+      <line left="249" top="983" right="611" bottom="1018">
+        <char left="249" top="985" right="268" bottom="1018">2</char>
+        <char left="273" top="985" right="291" bottom="1016">8</char>
+        <char left="294" top="985" right="314" bottom="1018">6</char>
+        <char left="315" top="985" right="328" bottom="1018"> </char>
+        <char left="329" top="985" right="355" bottom="1018">C</char>
+        <char left="360" top="984" right="383" bottom="1017">H</char>
+        <char left="389" top="984" right="411" bottom="1018">E</char>
+        <char left="415" top="983" right="440" bottom="1016">S</char>
+        <char left="443" top="983" right="466" bottom="1016">T</char>
+        <char left="469" top="985" right="494" bottom="1016">N</char>
+        <char left="498" top="985" right="523" bottom="1016">U</char>
+        <char left="526" top="984" right="550" bottom="1016">T</char>
+        <char left="551" top="983" right="561" bottom="1016"> </char>
+        <char left="562" top="983" right="585" bottom="1016">S</char>
+        <char left="589" top="985" right="611" bottom="1016">T</char>
+      </line>
+    </text>
+    <text id="geoData" left="230" top="1140" right="940" bottom="1220">
+      <value>WEST HEMPSTEAD, NY 11552-2423</value>
+      <line left="249" top="1149" right="932" bottom="1188">
+        <char left="249" top="1151" right="288" bottom="1182">W</char>
+        <char left="290" top="1151" right="311" bottom="1184">E</char>
+        <char left="315" top="1151" right="339" bottom="1184">S</char>
+        <char left="342" top="1151" right="365" bottom="1184">T</char>
+        <char left="366" top="1151" right="378" bottom="1184"> </char>
+        <char left="379" top="1151" right="403" bottom="1184">H</char>
+        <char left="409" top="1149" right="434" bottom="1182">E</char>
+        <char left="437" top="1151" right="466" bottom="1181">M</char>
+        <char left="471" top="1149" right="494" bottom="1182">P</char>
+        <char left="497" top="1151" right="521" bottom="1182">S</char>
+        <char left="523" top="1151" right="547" bottom="1182">T</char>
+        <char left="551" top="1151" right="572" bottom="1182">E</char>
+        <char left="574" top="1151" right="601" bottom="1182">A</char>
+        <char left="604" top="1151" right="629" bottom="1182">D</char>
+        <char left="634" top="1177" right="638" bottom="1188">,</char>
+        <char left="639" top="1151" right="655" bottom="1188"> </char>
+        <char left="656" top="1151" right="679" bottom="1182">N</char>
+        <char left="683" top="1151" right="708" bottom="1182">Y</char>
+        <char left="709" top="1151" right="722" bottom="1182"> </char>
+        <char left="723" top="1152" right="736" bottom="1181">1</char>
+        <char left="743" top="1151" right="754" bottom="1180" suspicious="true">1</char>
+        <char left="763" top="1151" right="782" bottom="1181" suspicious="true">5</char>
+        <char left="787" top="1151" right="805" bottom="1181">5</char>
+        <char left="807" top="1151" right="827" bottom="1181">2</char>
+        <char left="830" top="1167" right="842" bottom="1172">-</char>
+        <char left="843" top="1151" right="864" bottom="1182">2</char>
+        <char left="865" top="1151" right="886" bottom="1182">4</char>
+        <char left="889" top="1151" right="909" bottom="1181">2</char>
+        <char left="913" top="1151" right="932" bottom="1181">3</char>
+      </line>
+    </text>
+    <text id="other" left="230" top="1270" right="940" bottom="1330">
+      <value></value>
+      <line left="0" top="0" right="0" bottom="0" />
+    </text>
+    <text id="accountNumber" left="230" top="1420" right="940" bottom="1500">
+      <value>3361584975</value>
+      <line left="268" top="1443" right="492" bottom="1477">
+        <char left="268" top="1445" right="287" bottom="1476">3</char>
+        <char left="291" top="1445" right="309" bottom="1475">3</char>
+        <char left="312" top="1445" right="332" bottom="1476">6</char>
+        <char left="338" top="1446" right="349" bottom="1475" suspicious="true">1</char>
+        <char left="358" top="1445" right="377" bottom="1475" suspicious="true">5</char>
+        <char left="380" top="1445" right="400" bottom="1477">8</char>
+        <char left="402" top="1445" right="422" bottom="1474">4</char>
+        <char left="428" top="1443" right="447" bottom="1475">9</char>
+        <char left="450" top="1443" right="469" bottom="1474">7</char>
+        <char left="472" top="1444" right="492" bottom="1475">5</char>
+      </line>
+    </text>
+    <text id="mortgageFromPayer" left="1200" top="540" right="1500" bottom="590">
+      <value>$ 2,618.98</value>
+      <line left="1247" top="549" right="1459" bottom="585">
+        <char left="1247" top="551" right="1265" bottom="585">$</char>
+        <char left="1266" top="549" right="1303" bottom="585"> </char>
+        <char left="1304" top="549" right="1322" bottom="580">2</char>
+        <char left="1327" top="575" right="1331" bottom="584">,</char>
+        <char left="1337" top="549" right="1356" bottom="581">6</char>
+        <char left="1362" top="549" right="1373" bottom="579">1</char>
+        <char left="1382" top="549" right="1401" bottom="581">8</char>
+        <char left="1407" top="576" right="1411" bottom="579">.</char>
+        <char left="1417" top="551" right="1436" bottom="581">9</char>
+        <char left="1439" top="551" right="1459" bottom="581">8</char>
+      </line>
+    </text>
+    <text id="outstandingMortgage" left="1200" top="650" right="1500" bottom="710">
+      <value>S</value>
+      <line left="1245" top="675" right="1265" bottom="710">
+        <char left="1245" top="675" right="1265" bottom="710" suspicious="true">S</char>
+      </line>
+    </text>
+    <text id="mortrageDate" left="1700" top="650" right="1980" bottom="710">
+      <value>09-27-2016</value>
+      <line left="1726" top="674" right="1931" bottom="706">
+        <char left="1726" top="674" right="1746" bottom="706">0</char>
+        <char left="1749" top="674" right="1768" bottom="706">9</char>
+        <char left="1771" top="692" right="1782" bottom="697">-</char>
+        <char left="1784" top="676" right="1806" bottom="706">2</char>
+        <char left="1810" top="674" right="1828" bottom="706">7</char>
+        <char left="1831" top="692" right="1842" bottom="697">-</char>
+        <char left="1844" top="676" right="1864" bottom="706">2</char>
+        <char left="1867" top="674" right="1886" bottom="705">0</char>
+        <char left="1892" top="674" right="1903" bottom="706">1</char>
+        <char left="1911" top="674" right="1931" bottom="706">6</char>
+      </line>
+    </text>
+    <text id="refundOfOverpaid" left="1230" top="770" right="1500" bottom="840">
+      <value>$ 0.00</value>
+      <line left="1247" top="795" right="1379" bottom="833">
+        <char left="1247" top="796" right="1267" bottom="833">$</char>
+        <char left="1268" top="795" right="1303" bottom="833"> </char>
+        <char left="1304" top="795" right="1324" bottom="827">0</char>
+        <char left="1327" top="823" right="1331" bottom="827">.</char>
+        <char left="1337" top="795" right="1357" bottom="827">0</char>
+        <char left="1360" top="797" right="1379" bottom="827">0</char>
+      </line>
+    </text>
+    <text id="mortgageInsurance" left="1630" top="770" right="1900" bottom="840">
+      <value>$ 0.00</value>
+      <line left="1648" top="796" right="1778" bottom="832">
+        <char left="1648" top="796" right="1668" bottom="832">$</char>
+        <char left="1669" top="796" right="1702" bottom="832"> </char>
+        <char left="1703" top="798" right="1721" bottom="828">0</char>
+        <char left="1726" top="824" right="1730" bottom="827">.</char>
+        <char left="1735" top="798" right="1755" bottom="828">0</char>
+        <char left="1758" top="798" right="1778" bottom="828">0</char>
+      </line>
+    </text>
+    <text id="pointPaidOnPurchase" left="1230" top="890" right="1500" bottom="960">
+      <value>$ 0.00</value>
+      <line left="1248" top="894" right="1380" bottom="932">
+        <char left="1248" top="894" right="1268" bottom="932">$</char>
+        <char left="1269" top="894" right="1304" bottom="932"> </char>
+        <char left="1305" top="894" right="1324" bottom="925">0</char>
+        <char left="1328" top="921" right="1332" bottom="925">.</char>
+        <char left="1339" top="894" right="1357" bottom="925">0</char>
+        <char left="1362" top="894" right="1380" bottom="925">0</char>
+      </line>
+    </text>
+    <text id="addressOfMontage" left="1230" top="1170" right="1600" bottom="1270">
+      <value></value>
+      <line left="0" top="0" right="0" bottom="0" />
+    </text>
+    <text id="descriptionProperty" left="1230" top="1400" right="1600" bottom="1500">
+      <value></value>
+      <line left="0" top="0" right="0" bottom="0" />
+    </text>
+  </page>
+</document>

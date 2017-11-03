@@ -1,0 +1,45 @@
+<document xmlns="http://ocrsdk.com/schema/taskDescription-1.0.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://ocrsdk.com/schema/taskDescription-1.0.xsd http://ocrsdk.com/schema/taskDescription-1.0.xsd">
+
+    <fieldTemplates>
+
+    </fieldTemplates>
+
+    <page applyTo="0">
+        <!--RECIPIENT-->
+
+        <text id="recipientBio" left="400" top="330" right="870" bottom="550"/>
+        <text id="recipientFederalId" left="330" top="700" right="600" bottom="760"/>
+
+        <!--TAXPAYER-->
+
+        <text id="payersTaxpayerId" left="820" top="700"  right="1150" bottom="760"/>
+        <text id="payersName"       left="230" top="820"  right="460"  bottom="920"/>
+        <text id="streetAddress"    left="230" top="970"  right="650"  bottom="1050"/>
+        <text id="geoData"          left="230" top="1140" right="940"  bottom="1220"/>
+        <text id="other"            left="230" top="1270" right="940"  bottom="1330"/>
+        <text id="accountNumber"    left="230" top="1420" right="940"  bottom="1500"/>
+
+
+        <!--DATA-->
+
+        <text id="mortgageFromPayer"   left="1200" top="540" right="1500" bottom="590"/>
+        <text id="outstandingMortgage" left="1200" top="650" right="1500" bottom="710"/>
+        <text id="mortrageDate"        left="1700" top="650" right="1980" bottom="710"/>
+        <text id="refundOfOverpaid"    left="1230" top="770" right="1500" bottom="840"/>
+        <text id="mortgageInsurance"   left="1630" top="770" right="1900" bottom="840"/>
+        <text id="pointPaidOnPurchase" left="1230" top="890" right="1500" bottom="960"/>
+        <!--<text id="isSameAddressAsPayersAddress"/>-->
+        <text id="addressOfMontage"    left="1230" top="1170" right="1600" bottom="1270"/>
+        <text id="descriptionProperty" left="1230" top="1400" right="1600" bottom="1500"/>
+
+        <!--&lt;!&ndash;FORM&ndash;&gt;
+
+        <text id="fromType" left="1600" top="400" right="1850" bottom="500"/>
+        <checkmark>
+            <type>square</type>
+        </checkmark>-->
+
+    </page>
+</document>
