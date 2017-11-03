@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,24 +7,29 @@
         form {
             margin-top: 10px !important;
         }
-        code-listing {
-            margin-top: 20px;
+        code-list {
+            max-width: 500px;
+        }
+        head-label {
+            margin-top: 5px;
         }
     </style>
 
 </head>
 <body>
-    <div class="container">
+    <div class="container inputs-form">
         <form action="controller" method="post" enctype="multipart/form-data">
+
             <div class="container col-sm-3"> </div>
-            <div class="container col-sm-6">
+            <div class="container col-sm-9">
+                <h3 class="display-3 head-label"> PDF recognizing demo </h3>
                 <div class="row">
-                    <div class="form-group" >
-                        <div class="col-sm-10 in">
+                    <div class="form-group">
+                        <div class="col-sm-7">
                             <input type="file" name="file" class="form-control" placeholder="File name ...">
                         </div>
                         <div class="col-sm-2">
-                            <input type="submit" class="btn btn-primary"/>
+                            <input type="submit" class="btn btn-primary" name="Parse" value="Parse"/>
                         </div>
                     </div>
                 </div>
@@ -31,10 +37,17 @@
             <div class="container col-sm-3"> </div>
         </form>
     </div>
-    <div class="container code-listing">
-        <pre>
-            ${output}
-        </pre>
-    </div>
+    <br>
+    <c:if test="${not empty output}">
+        <div class="container code-list">
+            <div class="col-sm-2"> </div>
+            <div class="col-sm-8 code-list">
+                <pre>
+                    ${output}
+                </pre>
+            </div>
+            <div class="col-sm-2"> </div>
+        </div>
+    </c:if>
 </body>
 </html>
