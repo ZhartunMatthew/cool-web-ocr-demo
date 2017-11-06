@@ -1,0 +1,42 @@
+<document xmlns="http://ocrsdk.com/schema/taskDescription-1.0.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://ocrsdk.com/schema/taskDescription-1.0.xsd http://ocrsdk.com/schema/taskDescription-1.0.xsd">
+
+    <fieldTemplates>
+
+    </fieldTemplates>
+
+    <page applyTo="0">
+		<text id="employersocSecId"          left="160" top="290"  right="450"  bottom="330"/>
+		<text id="employerIdNumber"          left="160" top="430"  right="450"  bottom="470"/>
+		<text id="employerBio"               left="160" top="510"  right="600"  bottom="640"/>
+		<text id="controlNumber"             left="400" top="660"  right="800"  bottom="700"/>
+		<text id="employeeBio"               left="160" top="740"  right="900"  bottom="890"/>
+		<text id="wages"                     left="500" top="300"  right="850"  bottom="340"/>
+		<text id="federalIncomeTax"          left="900" top="300"  right="1270" bottom="340"/>
+		<text id="socialSecurityWages" 		 left="500" top="370"  right="850"  bottom="410"/>
+		<text id="socialSecurityTax"         left="900" top="370"  right="1270" bottom="410"/>
+		<text id="medicareWagesAndTips" 	 left="500" top="440"  right="850"  bottom="480"/>
+		<text id="medicareTaxWithheld" 		 left="900" top="440"  right="1270" bottom="480"/>
+		<text id="socialSecurityTips" 		 left="160" top="990"  right="480"  bottom="1040"/>
+		<text id="allocatedTips"  			 left="500" top="990"  right="900"  bottom="1040"/>
+		<text id="unknown" 					 left="910" top="990"  right="1270" bottom="1040"/>
+		<text id="dependetCareBenefits"		 left="160" top="1070" right="480"  bottom="1120"/>
+		<text id="nonQualifiedPlans" 		 left="500" top="1070" right="900"  bottom="1120"/>
+		<text id="codeA" 					 left="910" top="1070" right="1270" bottom="1120"/>
+		<text id="codeB" 					 left="900" top="1140" right="1280" bottom="1180"/>
+		<text id="codeC" 					 left="910" top="1200" right="1270" bottom="1240"/>
+		<text id="codeD"					 left="910" top="1270" right="1270" bottom="1310"/>
+		<text id="statutoryEmployee"		 left="160" top="1135" right="370"  bottom="1185"/>
+		<text id="retirementPlan"			 left="160" top="1200" right="370"  bottom="1250"/>
+		<text id="thirdPartySickPay"		 left="160" top="1270" right="370"  bottom="1320"/>
+		<text id="other"					 left="420" top="1170" right="850"  bottom="1320"/>
+		<text id="stateIdNumber"	         left="250" top="1330" right="650"  bottom="1380"/>
+		<text id="stateWages"				 left="700" top="1330" right="920"  bottom="1380"/>
+		<text id="stateIncomeTax"			 left="940" top="1330" right="1270" bottom="1380"/>
+		<text id="localWages"				 left="160" top="1450" right="500"  bottom="1510"/>
+		<text id="localIncomeTax"			 left="510" top="1450" right="850"  bottom="1510"/>
+		<text id="localityName"				 left="910" top="1450" right="1270" bottom="1510"/>
+
+    </page>
+</document>

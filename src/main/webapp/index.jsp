@@ -28,7 +28,7 @@
                         <div class="col-sm-7">
                             <input type="file" name="file" class="form-control" placeholder="File name ...">
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 button-parse">
                             <input type="submit" class="btn btn-primary" name="Parse" value="Parse"/>
                         </div>
                     </div>
