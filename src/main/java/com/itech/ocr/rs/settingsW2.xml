@@ -1,12 +1,12 @@
 <document xmlns="http://ocrsdk.com/schema/taskDescription-1.0.xsd"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://ocrsdk.com/schema/taskDescription-1.0.xsd http://ocrsdk.com/schema/taskDescription-1.0.xsd">
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://ocrsdk.com/schema/taskDescription-1.0.xsd http://ocrsdk.com/schema/taskDescription-1.0.xsd">
 
-    <fieldTemplates>
+	<fieldTemplates>
 
-    </fieldTemplates>
+	</fieldTemplates>
 
-    <page applyTo="0">
+	<page applyTo="0">
 		<text id="employersocSecId"          left="160" top="290"  right="450"  bottom="330"/>
 		<text id="employerIdNumber"          left="160" top="430"  right="450"  bottom="470"/>
 		<text id="employerBio"               left="160" top="510"  right="600"  bottom="640"/>
@@ -38,5 +38,5 @@
 		<text id="localIncomeTax"			 left="510" top="1450" right="850"  bottom="1510"/>
 		<text id="localityName"				 left="910" top="1450" right="1270" bottom="1510"/>
 
-    </page>
+	</page>
 </document>

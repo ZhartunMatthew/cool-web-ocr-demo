@@ -7,6 +7,12 @@
     </fieldTemplates>
 
     <page applyTo="0">
+        <!--FORM-->
+
+        <checkmark id="isCorrected" left="775" top="270" right="850" bottom="350">
+            <type>square</type>
+        </checkmark>
+
         <!--RECIPIENT-->
 
         <text id="recipientBio" left="400" top="330" right="870" bottom="550"/>
@@ -30,16 +36,11 @@
         <text id="refundOfOverpaid"    left="1230" top="770" right="1500" bottom="840"/>
         <text id="mortgageInsurance"   left="1630" top="770" right="1900" bottom="840"/>
         <text id="pointPaidOnPurchase" left="1230" top="890" right="1500" bottom="960"/>
-        <!--<text id="isSameAddressAsPayersAddress"/>-->
+        <checkmark id="isSameAddress" left="2070" top="1050" right="2170" bottom="1130">
+            <type>square</type>
+        </checkmark>
         <text id="addressOfMontage"    left="1230" top="1170" right="1600" bottom="1270"/>
         <text id="descriptionProperty" left="1230" top="1400" right="1600" bottom="1500"/>
-
-        <!--&lt;!&ndash;FORM&ndash;&gt;
-
-        <text id="fromType" left="1600" top="400" right="1850" bottom="500"/>
-        <checkmark>
-            <type>square</type>
-        </checkmark>-->
 
     </page>
 </document>

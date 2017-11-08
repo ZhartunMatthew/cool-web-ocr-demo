@@ -146,6 +146,8 @@ public class Client {
 		BufferedInputStream reader = new BufferedInputStream(
 				connection.getInputStream());
 
+		File myFile = new File(outputFile);
+		myFile.createNewFile(); // if file already exists will do nothing
 		FileOutputStream out = new FileOutputStream(outputFile);
 
 		try {
