@@ -40,10 +40,10 @@
     <br>
     <c:if test="${not empty output}">
         <div class="container code-list">
-            <div class="col-sm-5">
-                <iframe style="height: 800px; width: 450px;" src="data:application/pdf;base64,${pdf}"></iframe>
+            <div class="col-sm-6">
+                <iframe style="height: 800px; width: 550px;" src="data:application/pdf;base64,${pdf}"></iframe>
             </div>
-            <div class="col-sm-7 code-list">
+            <div class="col-sm-6 code-list">
                 <pre>
                     ${output}
                 </pre>
