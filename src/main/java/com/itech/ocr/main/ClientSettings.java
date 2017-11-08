@@ -10,10 +10,10 @@ import java.net.*;
 public class ClientSettings {
 
 	// Name of application you created
-	public static final String APPLICATION_ID = "PdfRecognizer1337";
+	public static final String APPLICATION_ID = "PdfDemoRecognizer";
 
 	// Password should be sent to your e-mail after application was created
-	public static final String PASSWORD = "3ktyGHzea3UXiK46I9Q/Srfh";
+	public static final String PASSWORD = "140m4d6GNrTwdPdToWlOedPL";
 	
 	public static void setupProxy()
 	{
