@@ -1,6 +1,5 @@
 package com.itech.ocr.controller;
 
-
 import com.itech.ocr.converter.Converter;
 import com.itech.ocr.main.Combiner;
 import com.itech.ocr.main.FromXLSXtoJSON;
@@ -86,6 +85,7 @@ public class Controller extends HttpServlet {
             PdfStamper pdfStamper = new PdfStamper(pdfReader,
                     new FileOutputStream(staticPath + "out-pdftables.pdf"));
             pdfStamper.close();
+            pdfReader.close();
 
 
             String json = "";
@@ -122,14 +122,13 @@ public class Controller extends HttpServlet {
             }
 
 
-
-
             String encodedBase64 = null;
             try {
                 FileInputStream fileInputStreamReader = new FileInputStream(file);
                 byte[] bytes = new byte[(int)file.length()];
                 fileInputStreamReader.read(bytes);
                 encodedBase64 = new String(Base64.encodeBase64(bytes));
+                fileInputStreamReader.close();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {

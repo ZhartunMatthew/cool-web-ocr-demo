@@ -20,7 +20,7 @@ import static com.itech.ocr.controller.Controller.staticPath;
 public class Combiner {
     public static void main(String[] args) {
         try {
-            String str = FromXLSXtoJSON.find("Foreign Transaction");
+            String str = FromXLSXtoJSON.find("Other information");
             System.out.println(str);
         } catch (IOException e) {
             e.printStackTrace();

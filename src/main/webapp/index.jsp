@@ -39,14 +39,12 @@
     </div>
     <br>
 
-
-
     <c:if test="${not empty pdf}">
         <c:if test="${not empty output}">
-            <div class="container code-list">
-                <div class="row">
+            <div class="">
+                <div class="">
                     <div class="col-sm-6">
-                        <iframe style="height: 800px; width: 550px;" src="data:application/pdf;base64,${pdf}"></iframe>
+                        <iframe style="height: 800px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
                     </div>
                     <div class="col-sm-6 code-list">
                         <c:if test="${not empty output}">
@@ -62,15 +60,9 @@
             <div>
                 <div>
                     <div class="col-sm-4">
-                        <iframe style="height: 800px; width: 600px;" src="data:application/pdf;base64,${pdf}"></iframe>
+                        <iframe style="height: 800px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
                     </div>
                     <div class="col-sm-8 code-list">
-                        <c:if test="${not empty output}">
-                            <pre>
-                                ${output}
-                            </pre>
-                        </c:if>
-
                         <c:if test="${not empty idDocument}">
                             <iframe src="https://docs.google.com/viewer?srcid=${idDocument}&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="1250px" height="800px"></iframe>
                         </c:if>

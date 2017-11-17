@@ -158,6 +158,7 @@ public class Client {
 			}
 		} finally {
 			out.close();
+			reader.close();
 		}
 	}
 

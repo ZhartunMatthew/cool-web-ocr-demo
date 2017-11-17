@@ -12,13 +12,10 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class FromXLSXtoJSON {
-    private static int D_COL = 4; // value
-    private static int A_COL = 1; // key
     public static String find(String text) throws IOException {
         StringBuilder json = new StringBuilder("{ ");
 
         boolean isFindBlock = false;
-
 
         File myFile = new File("D://server/out.xlsx");
         FileInputStream fis = new FileInputStream(myFile); // Finds the workbook instance for XLSX file
