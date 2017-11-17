@@ -2,6 +2,14 @@ package com.itech.ocr.main;
 
 import com.itech.ocr.entity.Check;
 import com.itech.ocr.ocr.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -14,10 +22,47 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
 public class Recognizer {
+	public static void PDFtoCSV(String fileSource, String fileOutput) throws IOException {
+		String file = fileSource;
+		String to = fileOutput;
+		String API_KEY = "kp5gt332g9j2";
+		String format = "xlsx-single";
+
+		CloseableHttpClient httpclient = HttpClients.createDefault();
+		try {
+			HttpPost httppost = new HttpPost("https://pdftables.com" +
+					"/api?key=" + API_KEY + "&format="+format);
+
+			FileBody bin = new FileBody(new File(file));
+
+			HttpEntity reqEntity = MultipartEntityBuilder.create()
+					.addPart("f", bin)
+					.build();
+			httppost.setEntity(reqEntity);
+
+			System.out.println("executing request " + httppost.getRequestLine());
+			CloseableHttpResponse response = httpclient.execute(httppost);
+			try {
+				HttpEntity resEntity = response.getEntity();
+				FileOutputStream fos = new FileOutputStream(to);
+				fos.write(EntityUtils.toByteArray(resEntity));
+				fos.close();
+				System.out.println(response.getStatusLine());
+
+				System.out.println("Done!");
+				EntityUtils.consume(resEntity);
+			} finally {
+				response.close();
+			}
+		} finally {
+			httpclient.close();
+		}
+	}
 
 	/**
 	 * @param args
@@ -106,7 +151,7 @@ public class Recognizer {
 				for(int j=0; j< text.getLength(); j++) {
 					Node nodeText = text.item(j);// <text>
 					if(nodeText.getNodeName().equals("text")) {
-						String id = nodeText.getAttributes().getNamedItem("id")+" ";
+						String id = nodeText.getAttributes().getNamedItem("id").getTextContent();
 						String value = "";
 						StringBuilder line = new StringBuilder();
 
@@ -149,7 +194,7 @@ public class Recognizer {
 		}
 	}
 
-	private static void writeToNewXML(List<Check> list, String out) throws TransformerException, ParserConfigurationException {
+	public static void writeToNewXML(List<Check> list, String out) throws TransformerException, ParserConfigurationException {
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 
@@ -170,7 +215,7 @@ public class Recognizer {
 
 
 			//firstname elements
-			row.setAttribute("id", check.getId().replaceAll("\"", "").trim().split("=")[1]);
+			row.setAttribute("id", check.getId().replaceAll("\"", "").trim());
 
 			//lastname elements
 			Element value = doc.createElement("value");

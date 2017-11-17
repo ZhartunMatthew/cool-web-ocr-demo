@@ -30,8 +30,8 @@ public class PdfToText {
     public void process() {
         String args[] = new String[3];
         args[0] = "recognize";
-        args[1] = "D:\\server\\W2.pdf";
-        args[2] = "D:\\server\\W2.pdf";
+        args[1] = "D:\\server\\pdfs\\K1-008.pdf";
+        args[2] = "D:\\server\\K1-008.pdf";
         System.out.println("Process multiple documents using ABBYY Cloud OCR SDK.\n");
 
 

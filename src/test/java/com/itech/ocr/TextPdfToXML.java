@@ -3,10 +3,12 @@ package com.itech.ocr;
 import com.itech.ocr.entity.Check;
 import com.itech.ocr.main.ClientSettings;
 import com.itech.ocr.main.CmdLineOptions;
+import com.itech.ocr.main.Recognizer;
 import com.itech.ocr.ocr.*;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -17,18 +19,21 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
 
 public class TextPdfToXML {
     @Test
-    public void processing() {
+    public void processing() throws ParserConfigurationException, SAXException, IOException {
+        Recognizer.postProcessingXML("D:\\server\\K1-008.xml", "D:\\server\\K1-008-parse.xml");
+        if(true) return;//TODO!!!!!!!!
         String args[] = new String[4];
         args[0] = "processFields";
-        args[1] = "D:\\server\\W2.pdf";
-        args[2] = "D:\\server\\settingsW2.xml";
-        args[3] = "D:\\server\\output-test-junit-W2.xml";
+        args[1] = "D:\\server\\K1-008.pdf";
+        args[2] = "D:\\server\\stmt.xml";
+        args[3] = "D:\\server\\K1-008.xml";
 
         System.out.println("Process documents using ABBYY Cloud OCR SDK.\n");
 

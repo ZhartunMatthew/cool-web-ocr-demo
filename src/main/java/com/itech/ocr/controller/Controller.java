@@ -2,7 +2,12 @@ package com.itech.ocr.controller;
 
 
 import com.itech.ocr.converter.Converter;
+import com.itech.ocr.main.Combiner;
+import com.itech.ocr.main.FromXLSXtoJSON;
 import com.itech.ocr.main.Recognizer;
+import com.itech.ocr.main.UploadToGoogleDrive;
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.PdfStamper;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.fileupload.FileItem;
 
@@ -64,33 +69,59 @@ public class Controller extends HttpServlet {
                 ex.printStackTrace();
             }
 
+            double bytesSourceFile = file.length();
+            double kilobytes = (bytesSourceFile / 1024);
+            System.out.println("kb: "+kilobytes);
+            //480, 203, 114
+
             String[] recognizeArgs = new String[3];
             recognizeArgs[0] = "recognize";
             recognizeArgs[1] = file.getAbsolutePath();
             recognizeArgs[2] = staticPath + "out.pdf";
             Recognizer.main(recognizeArgs);
 
-            String[] processArgs = new String[4];
-            processArgs[0] = "processFields";
-            processArgs[1] = recognizeArgs[2];
-            processArgs[2] = staticPath + "settings.xml";
-            processArgs[3] = staticPath + "data.xml";
-            Recognizer.main(processArgs);
+            //cut page for pdf-tables
+            PdfReader pdfReader = new PdfReader(staticPath + "out.pdf");
+            pdfReader.selectPages("2,3");
+            PdfStamper pdfStamper = new PdfStamper(pdfReader,
+                    new FileOutputStream(staticPath + "out-pdftables.pdf"));
+            pdfStamper.close();
 
-            Recognizer.postProcessingXML(processArgs[3], staticPath + "out.xml");
 
-            String json = Converter.convert(staticPath + "out.xml", staticPath + "out.json");
+            String json = "";
+            String urlToExcel = "";
 
-//            PrintWriter writer = resp.getWriter();
-//            writer.println(json);
+            if(kilobytes > 400) { // pdf -> xml&excel
+                //TODO: 3 страницы со ссылками попробовать прогнать
+                System.out.println("reference type");
+                String[] processArgs = new String[4];
+                processArgs[0] = "processFields";
+                processArgs[1] = recognizeArgs[2];
+                processArgs[2] = staticPath + "stmt.xml";
+                processArgs[3] = staticPath + "data.xml";
+                Recognizer.main(processArgs);
+                Recognizer.postProcessingXML(processArgs[3], staticPath + "out.xml");
+                Recognizer.PDFtoCSV(staticPath + "out-pdftables.pdf", staticPath + "out.xlsx");
+                Combiner.findLinksAndMerge(staticPath + "out.xml", staticPath + "out-merged.xml");
+                json = Converter.convert(staticPath + "out-merged.xml", staticPath + "out.json").replaceAll("\\\\\"", "\"");
+            } else if(kilobytes > 150 && kilobytes < 400) { // table file
+                System.out.println("table type");
+                Recognizer.PDFtoCSV(staticPath + "out.pdf", staticPath + "out.xlsx");
+                urlToExcel = UploadToGoogleDrive.upload();
+            } else {
+                System.out.println("just form type");
+                String[] processArgs = new String[4];
+                processArgs[0] = "processFields";
+                processArgs[1] = recognizeArgs[2];
+                processArgs[2] = staticPath + "settings.xml";
+                processArgs[3] = staticPath + "data.xml";
+                Recognizer.main(processArgs);
 
-            /*PrintWriter out = resp.getWriter();
-            resp.setContentType("application/pdf");
-            String filepath = "/home/jsp.pdf";
-            resp.setHeader("Content-Disposition", "inline; filename=’jsp.pdf"");
-            FileOutputStream fileout = new FileOutputStream(file);
-            fileout.close();
-            out.close();*/
+                Recognizer.postProcessingXML(processArgs[3], staticPath + "out.xml");
+                json = Converter.convert(staticPath + "out.xml", staticPath + "out.json");
+            }
+
+
 
 
             String encodedBase64 = null;
@@ -104,7 +135,7 @@ public class Controller extends HttpServlet {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
+            req.setAttribute("idDocument", urlToExcel);
             req.setAttribute("pdf", encodedBase64);
             req.setAttribute("output", json.trim());
             req.getRequestDispatcher("index.jsp").forward(req, resp);
