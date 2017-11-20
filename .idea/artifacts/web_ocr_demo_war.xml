@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="web-ocr-demo:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="web-ocr-demo.war">
-      <element id="artifact" artifact-name="web-ocr-demo:war exploded" />
-    </root>
-  </artifact>
-</component>
