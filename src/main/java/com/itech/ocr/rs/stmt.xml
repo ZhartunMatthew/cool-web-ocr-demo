@@ -23,6 +23,6 @@
         <text id="netLongTeam" left="1422" top="1184" right="1878" bottom="1248"/>
 
         <text id="Foreign Transaction" left="1979" top="533" right="2411" bottom="635"/>
-        <text id="Other information" left="1979" top="2056" right="2411" bottom="2167"/>
+        <!--<text id="Other information" left="1979" top="2056" right="2411" bottom="2167"/>-->
     </page>
 </document>

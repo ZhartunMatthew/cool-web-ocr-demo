@@ -37,7 +37,10 @@ public class FromXLSXtoJSON {
                 Cell cell = cellIterator.next();
                 DataFormatter formatter = new DataFormatter();
                 String val = formatter.formatCellValue(cell);
-                if(isFindBlock && !val.equals("")) return json.toString() +" }";
+                if(isFindBlock && !val.equals("")) {
+                    json.deleteCharAt(json.lastIndexOf(","));
+                    return json.toString() +" }";
+                }
                 switch (cell.getCellType()) {
                     case Cell.CELL_TYPE_STRING:
                         if(cell.getStringCellValue().contains(text) &&
@@ -58,14 +61,14 @@ public class FromXLSXtoJSON {
                                         if(!cell.getStringCellValue().equals("") && !isKeyAlreadyExist) {
                                             isKeyAlreadyExist = true;
                                             String key = cell.getStringCellValue();
-                                            tmp += "\""+toCamelCase(key)+"\": ";
+                                            tmp += "\t\""+toCamelCase(key)+"\": ";
                                         }
                                         break;
                                     }
                                 }
                                 cell = cellIterator.next();
                                 if(!cellIterator.hasNext() && cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-                                    tmp += cell.getNumericCellValue()+", ";
+                                    tmp += cell.getNumericCellValue()+", \n";
                                     isValueAlreadyExist = true;
                                 }
                             }
@@ -76,6 +79,8 @@ public class FromXLSXtoJSON {
             }
         }
         json.append(" }");
+        json.deleteCharAt(json.lastIndexOf(","));
+        System.out.println("!!!"+json);
         return json.toString();
     }
 

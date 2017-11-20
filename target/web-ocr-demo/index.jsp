@@ -44,7 +44,7 @@
             <div class="">
                 <div class="">
                     <div class="col-sm-6">
-                        <iframe style="height: 800px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
+                        <iframe style="height: 1298px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
                     </div>
                     <div class="col-sm-6 code-list">
                         <c:if test="${not empty output}">

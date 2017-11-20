@@ -1,10 +1,7 @@
 package com.itech.ocr.controller;
 
 import com.itech.ocr.converter.Converter;
-import com.itech.ocr.main.Combiner;
-import com.itech.ocr.main.FromXLSXtoJSON;
-import com.itech.ocr.main.Recognizer;
-import com.itech.ocr.main.UploadToGoogleDrive;
+import com.itech.ocr.main.*;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import org.apache.commons.codec.binary.Base64;
@@ -92,7 +89,6 @@ public class Controller extends HttpServlet {
             String urlToExcel = "";
 
             if(kilobytes > 400) { // pdf -> xml&excel
-                //TODO: 3 страницы со ссылками попробовать прогнать
                 System.out.println("reference type");
                 String[] processArgs = new String[4];
                 processArgs[0] = "processFields";
@@ -103,7 +99,8 @@ public class Controller extends HttpServlet {
                 Recognizer.postProcessingXML(processArgs[3], staticPath + "out.xml");
                 Recognizer.PDFtoCSV(staticPath + "out-pdftables.pdf", staticPath + "out.xlsx");
                 Combiner.findLinksAndMerge(staticPath + "out.xml", staticPath + "out-merged.xml");
-                json = Converter.convert(staticPath + "out-merged.xml", staticPath + "out.json").replaceAll("\\\\\"", "\"");
+                json = ToPrettyView.toPrettyView();
+                //json = Converter.convert(staticPath + "out-merged.xml", staticPath + "out.json").replaceAll("\\\\\"", "\"");
             } else if(kilobytes > 150 && kilobytes < 400) { // table file
                 System.out.println("table type");
                 Recognizer.PDFtoCSV(staticPath + "out.pdf", staticPath + "out.xlsx");
@@ -123,16 +120,17 @@ public class Controller extends HttpServlet {
 
 
             String encodedBase64 = null;
+            FileInputStream fileInputStreamReader = new FileInputStream(file);
             try {
-                FileInputStream fileInputStreamReader = new FileInputStream(file);
                 byte[] bytes = new byte[(int)file.length()];
                 fileInputStreamReader.read(bytes);
                 encodedBase64 = new String(Base64.encodeBase64(bytes));
-                fileInputStreamReader.close();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+                fileInputStreamReader.close();
             }
             req.setAttribute("idDocument", urlToExcel);
             req.setAttribute("pdf", encodedBase64);

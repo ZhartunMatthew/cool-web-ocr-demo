@@ -147,8 +147,8 @@ public class Client {
 				connection.getInputStream());
 
 		File myFile = new File(outputFile);
-		myFile.createNewFile(); // if file already exists will do nothing
-		FileOutputStream out = new FileOutputStream(outputFile);
+		//myFile.createNewFile(); // if file already exists will do nothing
+		FileOutputStream out = new FileOutputStream(myFile);
 
 		try {
 			byte[] data = new byte[1024];

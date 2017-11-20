@@ -11,7 +11,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,11 +29,17 @@ public class Combiner {
             e.printStackTrace();
         }
     }
+    private static String temporaryJson = "D:\\server\\temporary.json";
     private static String reference = "STMT";
     /*private static String file = "D:\\server\\K1-008-parse.xml";
     private static String out = "D:\\server\\K1-008-parse-2.xml";*/
 
     public static void findLinksAndMerge(String file, String out) throws ParserConfigurationException, IOException, SAXException {
+        FileWriter fileTemporaryJson = new FileWriter(temporaryJson, false);
+        PrintWriter pwOb = new PrintWriter(fileTemporaryJson, false);
+        pwOb.flush();
+        boolean isFirstElementWrited = false;
+        pwOb.print("{ ");
         List<Check> checkList = new ArrayList<>();
         try {
             // Создается построитель документа
@@ -62,8 +71,13 @@ public class Combiner {
                             }
                             System.out.print(bookProp.getNodeName() + ":");
                             if(value.trim().equals(reference)) {
-                                System.out.println(FromXLSXtoJSON.find(id));
-                                checkList.add(new Check(id, FromXLSXtoJSON.find(id), ""));
+                                if(isFirstElementWrited) {
+                                    pwOb.println(",");
+                                }
+                                pwOb.println("\""+id+"\": "+FromXLSXtoJSON.find(id));
+                                isFirstElementWrited = true;
+
+                                //checkList.add(new Check(id, FromXLSXtoJSON.find(id), ""));
                             } else {
                                 checkList.add(new Check(id, value, ""));
                                 System.out.println(value);
@@ -86,6 +100,8 @@ public class Combiner {
         } catch (TransformerException e) {
             e.printStackTrace();
         }
+        pwOb.println("}");
+        pwOb.close();
     }
 }
 
