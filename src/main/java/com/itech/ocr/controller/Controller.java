@@ -88,7 +88,7 @@ public class Controller extends HttpServlet {
             String json = "";
             String urlToExcel = "";
 
-            if(kilobytes > 400) { // pdf -> xml&excel
+            if(kilobytes > 220) { // pdf -> xml&excel
                 System.out.println("reference type");
                 String[] processArgs = new String[4];
                 processArgs[0] = "processFields";
@@ -101,7 +101,7 @@ public class Controller extends HttpServlet {
                 Combiner.findLinksAndMerge(staticPath + "out.xml", staticPath + "out-merged.xml");
                 json = ToPrettyView.toPrettyView();
                 //json = Converter.convert(staticPath + "out-merged.xml", staticPath + "out.json").replaceAll("\\\\\"", "\"");
-            } else if(kilobytes > 150 && kilobytes < 400) { // table file
+            } else if(kilobytes > 150 && kilobytes < 220) { // table file
                 System.out.println("table type");
                 Recognizer.PDFtoCSV(staticPath + "out.pdf", staticPath + "out.xlsx");
                 urlToExcel = UploadToGoogleDrive.upload();
