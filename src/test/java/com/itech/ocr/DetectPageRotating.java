@@ -19,7 +19,7 @@ import static org.opencv.imgproc.Imgproc.THRESH_BINARY;
 
 public class DetectPageRotating {
     //D:/server/pdfs/1/K1-008-22_Page_1.jpg
-    private static String file = "D:/server/pdfs/1/rot45-22_Page_1.jpg";
+    private static String file = "D:/server/pdfs/1/p16.jpg";
     private static String output = "D:/server/1.jpg";
 
     @BeforeClass
