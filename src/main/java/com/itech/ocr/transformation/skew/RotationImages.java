@@ -1,4 +1,4 @@
-package com.itech.ocr.transformation;
+package com.itech.ocr.transformation.skew;
 
 import org.opencv.core.*;
 import org.opencv.highgui.Highgui;
@@ -7,16 +7,18 @@ import org.opencv.imgproc.Imgproc;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.itech.ocr.transformation.PdfToImages.directory;
+import static com.itech.ocr.transformation.skew.PdfToImages.directory;
 import static org.opencv.imgproc.Imgproc.THRESH_BINARY;
 
 public class RotationImages {
     static {
+        String patg = System.getProperty("java.library.path");
+        System.out.println(patg);
         System.out.println("Load OpenCV library...");
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 
-    public static void transform(int count) {
+    public static void rotate(int count) {
         for(int i=0; i< count; i++) {
             computeSkew(directory+(i+1)+".png");
         }

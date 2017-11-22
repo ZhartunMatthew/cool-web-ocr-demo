@@ -1,7 +1,9 @@
 package com.itech.ocr.controller;
 
 import com.itech.ocr.converter.Converter;
+import com.itech.ocr.correction.Correction;
 import com.itech.ocr.main.*;
+import com.itech.ocr.transformation.skew.PdfToImages;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import org.apache.commons.codec.binary.Base64;
@@ -16,6 +18,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Vector;
 //Required imports
@@ -58,9 +62,11 @@ public class Controller extends HttpServlet {
             }
 
             File file = new File(staticPath + "/file.pdf");
+            File fileUploaded = new File(staticPath + "/file-uploaded.pdf");
 
             try {
                 fileItem.write(file);
+                Files.copy(file.toPath(), fileUploaded.toPath(), StandardCopyOption.REPLACE_EXISTING);
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -69,6 +75,11 @@ public class Controller extends HttpServlet {
             double kilobytes = (bytesSourceFile / 1024);
             System.out.println("kb: "+kilobytes);
             //480, 203, 114
+
+            //todo: implement this method
+            if(kilobytes > 220) {
+                Correction.correctSkewAndScale(file.getAbsolutePath());
+            }
 
             String[] recognizeArgs = new String[3];
             recognizeArgs[0] = "recognize";
@@ -89,6 +100,7 @@ public class Controller extends HttpServlet {
             String urlToExcel = "";
 
             if(kilobytes > 220) { // pdf -> xml&excel
+                //if(true) return;
                 System.out.println("reference type");
                 String[] processArgs = new String[4];
                 processArgs[0] = "processFields";
@@ -120,9 +132,9 @@ public class Controller extends HttpServlet {
 
 
             String encodedBase64 = null;
-            FileInputStream fileInputStreamReader = new FileInputStream(file);
+            FileInputStream fileInputStreamReader = new FileInputStream(fileUploaded);
             try {
-                byte[] bytes = new byte[(int)file.length()];
+                byte[] bytes = new byte[(int)fileUploaded.length()];
                 fileInputStreamReader.read(bytes);
                 encodedBase64 = new String(Base64.encodeBase64(bytes));
             } catch (FileNotFoundException e) {

@@ -7,22 +7,22 @@
     </fieldTemplates>
 
     <page applyTo="0">
-        <text id="employerId" left="304" top="694" right="1218" bottom="748"/>
-        <text id="nameAddress" left="304" top="778" right="1218" bottom="939"/>
-        <text id="irsCenter" left="304" top="1024" right="1218" bottom="1066"/>
+        <!--<text id="employerId" left="93" top="416" right="710" bottom="438"/>-->
+        <text id="nameAddress" left="93" top="455" right="710" bottom="577"/>
+        <!--<text id="irsCenter" left="93" top="641" right="710" bottom="662"/>-->
 
-        <text id="ordBusinessIncome" left="1422" top="338" right="1878" bottom="364"/>
-        <text id="realEstateIncome" left="1422" top="431" right="1878" bottom="457"/>
-        <text id="otherNetRealIncome" left="1422" top="524" right="1878" bottom="550"/>
-        <text id="guaranteedPayment" left="1422" top="617" right="1878" bottom="643"/>
-        <text id="interestIncome" left="1422" top="710" right="1878" bottom="736"/>
-        <text id="ordinaryDividends" left="1422" top="812" right="1878" bottom="846"/>
-        <text id="qualifyDividends" left="1422" top="888" right="1878" bottom="964"/>
-        <text id="royalties" left="1422" top="998" right="1878" bottom="1053"/>
-        <text id="netShortTeam" left="1422" top="1095" right="1878" bottom="1146"/>
-        <text id="netLongTeam" left="1422" top="1184" right="1878" bottom="1248"/>
+        <text id="ordBusinessIncome" left="838" top="184" right="1126" bottom="214"/>
+        <text id="realEstateIncome" left="838" top="240" right="1126" bottom="277"/>
+        <text id="otherNetRealIncome" left="838" top="311" right="1126" bottom="341"/>
+        <text id="guaranteedPayment" left="838" top="370" right="1126" bottom="408"/>
+        <text id="interestIncome" left="838" top="434" right="1126" bottom="468"/>
+        <text id="ordinaryDividends" left="838" top="493" right="1126" bottom="518"/>
+        <text id="qualifyDividends" left="838" top="545" right="1126" bottom="595"/>
+        <!--<text id="royalties" left="838" top="624" right="1126" bottom="673"/>-->
+        <!--<text id="netShortTeam" left="838" top="692" right="1126" bottom="721"/>-->
+        <text id="netLongTeam" left="838" top="751" right="1126" bottom="787"/>
 
-        <text id="Foreign Transaction" left="1979" top="533" right="2411" bottom="635"/>
+        <text id="Foreign Transaction" left="1218" top="311" right="1493" bottom="341"/>
         <!--<text id="Other information" left="1979" top="2056" right="2411" bottom="2167"/>-->
     </page>
 </document>

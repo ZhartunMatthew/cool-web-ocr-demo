@@ -16,7 +16,7 @@ public class SkewDetect {
 
     @BeforeClass
     public static void init() {
-        System.out.println("Load OpenCV library...");
+        System.out.println("Load Open CV library...");
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
 
