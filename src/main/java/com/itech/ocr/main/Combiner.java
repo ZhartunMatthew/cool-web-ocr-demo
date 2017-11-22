@@ -2,6 +2,7 @@ package com.itech.ocr.main;
 
 import com.itech.ocr.converter.Converter;
 import com.itech.ocr.entity.Check;
+import com.itech.ocr.util.Util;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -29,7 +30,7 @@ public class Combiner {
             e.printStackTrace();
         }
     }
-    private static String temporaryJson = "D:\\server\\temporary.json";
+    private static String temporaryJson = Util.path+"temporary.json";
     private static String reference = "STMT";
     /*private static String file = "D:\\server\\K1-008-parse.xml";
     private static String out = "D:\\server\\K1-008-parse-2.xml";*/

@@ -1,5 +1,6 @@
 package com.itech.ocr.transformation.skew;
 
+import com.itech.ocr.util.Util;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.ImageType;
 import org.apache.pdfbox.rendering.PDFRenderer;
@@ -14,8 +15,8 @@ import static com.itech.ocr.transformation.skew.RotationImages.rotate;
 
 public class PdfToImages {
     public static int QUALITY_COEFFICIENT = 3;
-    public static String directory = "D:\\server\\transformation\\";
-    private static String urlPdf = "D:\\server\\transformation\\test.pdf";
+    public static String directory = Util.path+"transformation\\";
+    private static String urlPdf = Util.path+"transformation\\test.pdf";
 
     public static int getImagesFromPDF(String urlPdf) throws IOException {
         PDDocument document = PDDocument.load(new File(urlPdf));
@@ -54,6 +55,6 @@ public class PdfToImages {
         document.close();*/
 
         //rotate(2);
-        toPdf(2, directory+"test2.pdf");
+        toPdf(2, directory+"test3.pdf");
     }
 }

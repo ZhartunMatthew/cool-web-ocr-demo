@@ -4,6 +4,7 @@ import com.itech.ocr.converter.Converter;
 import com.itech.ocr.correction.Correction;
 import com.itech.ocr.main.*;
 import com.itech.ocr.transformation.skew.PdfToImages;
+import com.itech.ocr.util.Util;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import org.apache.commons.codec.binary.Base64;
@@ -30,7 +31,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 public class Controller extends HttpServlet {
 
-    public static String staticPath = "D:\\server\\";
+    public static String staticPath = Util.path;
 
     public void init(ServletConfig config) throws ServletException{
         System.out.println("INIT");
@@ -80,7 +81,7 @@ public class Controller extends HttpServlet {
             if(kilobytes > 220) {
                 Correction.correctSkewAndScale(file.getAbsolutePath());
             }
-
+            //todo: uncomment
             String[] recognizeArgs = new String[3];
             recognizeArgs[0] = "recognize";
             recognizeArgs[1] = file.getAbsolutePath();
@@ -130,11 +131,11 @@ public class Controller extends HttpServlet {
                 json = Converter.convert(staticPath + "out.xml", staticPath + "out.json");
             }
 
-
+            File previewFile = new File(staticPath + "out.pdf");
             String encodedBase64 = null;
-            FileInputStream fileInputStreamReader = new FileInputStream(fileUploaded);
+            FileInputStream fileInputStreamReader = new FileInputStream(previewFile);
             try {
-                byte[] bytes = new byte[(int)fileUploaded.length()];
+                byte[] bytes = new byte[(int)previewFile.length()];
                 fileInputStreamReader.read(bytes);
                 encodedBase64 = new String(Base64.encodeBase64(bytes));
             } catch (FileNotFoundException e) {

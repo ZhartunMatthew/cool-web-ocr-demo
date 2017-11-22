@@ -1,0 +1,28 @@
+<document xmlns="http://ocrsdk.com/schema/taskDescription-1.0.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://ocrsdk.com/schema/taskDescription-1.0.xsd http://ocrsdk.com/schema/taskDescription-1.0.xsd">
+
+    <fieldTemplates>
+
+    </fieldTemplates>
+
+    <page applyTo="0">
+        <text id="employerId" left="126" top="527" right="710" bottom="571"/>
+        <text id="nameAddress" left="93" top="605" right="907" bottom="756"/>
+        <!--<text id="irsCenter" left="93" top="641" right="710" bottom="662"/>-->
+
+        <text id="ordBusinessIncome" left="1108" top="228" right="1512" bottom="275"/>
+        <!--<text id="realEstateIncome" left="1108" top="240" right="1512" bottom="277"/>-->
+        <!--<text id="otherNetRealIncome" left="1108" top="311" right="1512" bottom="341"/>-->
+        <!--<text id="guaranteedPayment" left="1108" top="370" right="1512" bottom="408"/>-->
+        <text id="interestIncome" left="1108" top="571" right="1512" bottom="609"/>
+        <text id="ordinaryDividends" left="1108" top="647" right="1512" bottom="677"/>
+        <text id="qualifyDividends" left="1108" top="710" right="1512" bottom="776"/>
+        <!--<text id="royalties" left="838" top="624" right="1126" bottom="673"/>-->
+        <text id="netShortTeam" left="1108" top="907" right="1512" bottom="947"/>
+        <text id="netLongTeam" left="1108" top="990" right="1512" bottom="1036"/>
+
+        <text id="Foreign Transaction" left="1675" top="393" right="1992" bottom="436"/>
+        <!--<text id="Other information" left="1979" top="2056" right="2411" bottom="2167"/>-->
+    </page>
+</document>

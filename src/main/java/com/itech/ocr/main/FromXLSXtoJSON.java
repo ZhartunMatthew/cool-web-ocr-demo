@@ -1,5 +1,6 @@
 package com.itech.ocr.main;
 
+import com.itech.ocr.util.Util;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,7 +18,7 @@ public class FromXLSXtoJSON {
 
         boolean isFindBlock = false;
 
-        File myFile = new File("D://server/out.xlsx");
+        File myFile = new File(Util.path+"out.xlsx");
         FileInputStream fis = new FileInputStream(myFile); // Finds the workbook instance for XLSX file
         XSSFWorkbook myWorkBook = new XSSFWorkbook(fis); // Return first sheet from the XLSX workbook
         XSSFSheet mySheet = myWorkBook.getSheetAt(0); // Get iterator to all the rows in current sheet I

@@ -24,6 +24,7 @@ import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.Permission;
+import com.itech.ocr.util.Util;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -52,8 +53,8 @@ public class UploadToGoogleDrive {
      */
     private static final String APPLICATION_NAME = "";
 
-    private static final String UPLOAD_FILE_PATH = "D:\\server\\out.xlsx";
-    private static final String DIR_FOR_DOWNLOADS = "D:\\server";
+    private static final String UPLOAD_FILE_PATH = Util.path+"out.xlsx";
+    private static final String DIR_FOR_DOWNLOADS = Util.path;
     private static final java.io.File UPLOAD_FILE = new java.io.File(UPLOAD_FILE_PATH);
 
     /** Directory to store user credentials. */

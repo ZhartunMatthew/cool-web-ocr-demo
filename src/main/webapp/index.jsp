@@ -22,7 +22,6 @@
 
             <div class="container col-sm-3"> </div>
             <div class="container col-sm-9">
-                <h3 class="display-3 head-label"> PDF recognizing demo </h3>
                 <div class="row">
                     <div class="form-group">
                         <div class="col-sm-7">
@@ -44,11 +43,11 @@
             <div class="">
                 <div class="">
                     <div class="col-sm-6">
-                        <iframe style="height: 1298px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
+                        <iframe style="height: 500px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
                     </div>
                     <div class="col-sm-6 code-list">
                         <c:if test="${not empty output}">
-                            <pre>
+                            <pre style="height: 500px">
                                 ${output}
                             </pre>
                         </c:if>
@@ -60,11 +59,11 @@
             <div>
                 <div>
                     <div class="col-sm-4">
-                        <iframe style="height: 800px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
+                        <iframe style="height: 500px; width: 100%;" src="data:application/pdf;base64,${pdf}"></iframe>
                     </div>
                     <div class="col-sm-8 code-list">
                         <c:if test="${not empty idDocument}">
-                            <iframe src="https://docs.google.com/viewer?srcid=${idDocument}&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="1250px" height="800px"></iframe>
+                            <iframe src="https://docs.google.com/viewer?srcid=${idDocument}&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="1250px" height="500px"></iframe>
                         </c:if>
                     </div>
                 </div>

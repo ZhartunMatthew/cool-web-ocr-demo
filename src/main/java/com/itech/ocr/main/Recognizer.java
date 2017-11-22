@@ -30,7 +30,7 @@ public class Recognizer {
 	public static void PDFtoCSV(String fileSource, String fileOutput) throws IOException {
 		String file = fileSource;
 		String to = fileOutput;
-		String API_KEY = "fpi1qn4ll18t";
+		String API_KEY = "x2nnptr9rh31";//fpi1qn4ll18t
 		String format = "xlsx-single";
 
 		CloseableHttpClient httpclient = HttpClients.createDefault();
